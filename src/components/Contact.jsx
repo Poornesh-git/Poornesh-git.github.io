@@ -18,14 +18,14 @@ const contactInfo = [
   {
     icon: <FiGithub className="w-5 h-5" />,
     label: 'GitHub',
-    value: 'github.com/Poornesh-git',
+    value: 'Allam Poornesh',
     href: 'https://github.com/Poornesh-git',
   },
   {
     icon: <FiLinkedin className="w-5 h-5" />,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/allam-poornesh',
-    href: 'https://linkedin.com/in/allam-poornesh',
+    value: 'Allam Poornesh',
+    href: 'https://www.linkedin.com/in/poornesh-allam-455804234/',
   },
 ]
 
