@@ -84,7 +84,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/resume.pdf"
+            href="/Allam_Poornesh_Resume.pdf"
             download
             className="px-4 py-2 bg-accent text-primary font-semibold text-sm rounded-lg hover:bg-accentDark transition-colors duration-200 text-center"
           >
