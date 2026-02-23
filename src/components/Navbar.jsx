@@ -1,25 +1,28 @@
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#internship' },
-  { label: 'Certifications', href: '#certifications' },
-  { label: 'Achievements', href: '#achievements' },
-  { label: 'Contact', href: '#contact' },
-]
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#internship" },
+  { label: "Certifications", href: "#certifications" },
+  { label: "Achievements", href: "#achievements" },
+  { label: "Contact", href: "#contact" },
+];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // ✅ Dynamic base URL (safe for GitHub Pages)
+  const resumeUrl = `${import.meta.env.BASE_URL}Allam_Poornesh_Resume.pdf`;
 
   return (
     <motion.nav
@@ -27,15 +30,21 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-primary/95 backdrop-blur-md shadow-lg shadow-black/20' : 'bg-transparent'
+        scrolled
+          ? "bg-primary/95 backdrop-blur-md shadow-lg shadow-black/20"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#hero" className="text-accent font-mono font-bold text-xl tracking-wider">
+          <a
+            href="#hero"
+            className="text-accent font-mono font-bold text-xl tracking-wider"
+          >
             AP.
           </a>
-          {/* Desktop nav */}
+
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
@@ -46,27 +55,36 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="/resume.pdf"
-              download
-              className="px-4 py-2 bg-accent text-primary font-semibold text-sm rounded-lg hover:bg-accentDark transition-colors duration-200"
-            >
-              Resume
-            </a>
+
+          
           </div>
-          {/* Mobile menu button */}
+
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-textSecondary hover:text-accent p-2"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            <div className={`w-6 h-0.5 bg-current transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
-            <div className={`w-6 h-0.5 bg-current my-1.5 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <div className={`w-6 h-0.5 bg-current transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+            <div
+              className={`w-6 h-0.5 bg-current transition-all duration-300 ${
+                menuOpen ? "rotate-45 translate-y-1.5" : ""
+              }`}
+            />
+            <div
+              className={`w-6 h-0.5 bg-current my-1.5 transition-all duration-300 ${
+                menuOpen ? "opacity-0" : ""
+              }`}
+            />
+            <div
+              className={`w-6 h-0.5 bg-current transition-all duration-300 ${
+                menuOpen ? "-rotate-45 -translate-y-1.5" : ""
+              }`}
+            />
           </button>
         </div>
       </div>
-      {/* Mobile menu */}
+
+      {/* Mobile Menu */}
       {menuOpen && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -83,9 +101,12 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+
           <a
-            href="/resume.pdf"
-            download
+            href={resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
             className="px-4 py-2 bg-accent text-primary font-semibold text-sm rounded-lg hover:bg-accentDark transition-colors duration-200 text-center"
           >
             Resume
@@ -93,5 +114,5 @@ export default function Navbar() {
         </motion.div>
       )}
     </motion.nav>
-  )
+  );
 }

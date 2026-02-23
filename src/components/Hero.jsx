@@ -37,7 +37,7 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/resume.pdf"
+              href="/Allam_Poornesh_Resume.pdf"
               download
               className="flex items-center gap-2 px-6 py-3 bg-accent text-primary font-semibold rounded-lg hover:bg-accentDark transition-colors duration-200 shadow-lg shadow-accent/20"
             >
@@ -66,7 +66,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Scroll indicator */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.5 }}
@@ -79,7 +79,7 @@ export default function Hero() {
               className="w-1 h-1 bg-accent rounded-full"
             />
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )
