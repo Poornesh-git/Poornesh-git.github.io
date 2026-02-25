@@ -25,7 +25,7 @@ const contactInfo = [
     icon: <FiLinkedin className="w-5 h-5" />,
     label: 'LinkedIn',
     value: 'Allam Poornesh',
-    href: 'https://www.linkedin.com/in/poornesh-allam-455804234/',
+    href: 'https://www.linkedin.com/in/poornesh-allam/',
   },
 ]
 
