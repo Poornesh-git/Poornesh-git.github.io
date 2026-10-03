@@ -66,8 +66,8 @@ export default function Contact() {
           >
             <h3 className="text-xl font-bold text-textPrimary mb-4">Let's build something great</h3>
             <p className="text-textSecondary leading-relaxed mb-8">
-              I'm actively looking for cloud and full-stack engineering roles. Whether you have an opportunity,
-              a project idea, or just want to connect — I'd love to hear from you.
+              I'm currently exploring opportunities for SDE, Product Manager, and related roles. Whether you
+              have an opportunity, a project idea, or just want to connect — I'd love to hear from you.
             </p>
             <div className="space-y-4">
               {contactInfo.map((item) => (
