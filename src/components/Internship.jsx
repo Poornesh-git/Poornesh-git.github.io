@@ -17,7 +17,7 @@ export default function Internship() {
           className="text-center mb-16"
         >
           <p className="text-accent font-mono text-sm tracking-widest uppercase mb-2">Work Experience</p>
-          <h2 className="text-4xl font-bold text-textPrimary">Internship</h2>
+          <h2 className="text-4xl font-bold text-textPrimary">Work Experience</h2>
           <div className="w-16 h-1 bg-accent mx-auto mt-4 rounded-full" />
         </motion.div>
 
@@ -33,13 +33,13 @@ export default function Internship() {
                 <FiBriefcase className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-textPrimary">AI & ML Intern</h3>
-                <p className="text-accent font-semibold mt-1">Tessolve Semiconductor Pvt Ltd</p>
+                <h3 className="text-xl font-bold text-textPrimary">Graduate Engineer Trainee</h3>
+                <p className="text-accent font-semibold mt-1">Blue Star Ltd.</p>
               </div>
             </div>
             <div className="flex flex-col gap-1 text-sm text-textSecondary">
               <span className="flex items-center gap-1.5">
-                <FiCalendar className="w-4 h-4" /> 2023
+                <FiCalendar className="w-4 h-4" /> Present
               </span>
               <span className="flex items-center gap-1.5">
                 <FiMapPin className="w-4 h-4" /> India
@@ -48,13 +48,13 @@ export default function Internship() {
           </div>
 
           <p className="text-textSecondary leading-relaxed mb-6">
-            Worked on applied Machine Learning projects at Tessolve Semiconductor, focusing on practical
-            implementations of supervised and unsupervised learning algorithms. Gained hands-on experience
-            with industry-standard Python ML libraries and data preprocessing pipelines.
+            Currently working as a Graduate Engineer Trainee at Blue Star Ltd. while pursuing an MBA at
+            Manipal University Jaipur, building practical business and technical problem-solving skills through
+            real-world industry exposure.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-4 mb-6">
-            {['Support Vector Machines (SVM)', 'Regression Analysis', 'Clustering Algorithms'].map((item) => (
+            {['Graduate Engineer Trainee', 'Blue Star Ltd.', 'MBA @ Manipal University Jaipur'].map((item) => (
               <div
                 key={item}
                 className="bg-primary/50 rounded-lg p-4 border border-slate-700/50 text-center"
@@ -67,7 +67,7 @@ export default function Internship() {
           <div>
             <h4 className="text-textPrimary font-semibold mb-3 text-sm">Technologies Used</h4>
             <div className="flex flex-wrap gap-2">
-              {['Python', 'scikit-learn', 'NumPy', 'pandas', 'Matplotlib', 'Jupyter Notebook'].map((tech) => (
+              {['Operations', 'Problem Solving', 'Team Collaboration', 'Business Analysis', 'Project Coordination', 'Communication'].map((tech) => (
                 <span
                   key={tech}
                   className="px-3 py-1 bg-primary text-accent text-xs rounded-full font-mono border border-accent/20"

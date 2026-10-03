@@ -21,9 +21,9 @@ const achievements = [
     border: 'border-purple-500/30',
   },
   {
-    title: 'Internship + PPO — Blue Star',
+    title: 'PPO — Blue Star',
     description:
-      "Completed an internship at Blue Star, one of India's leading HVAC and commercial refrigeration companies, earning a Pre-Placement Offer (PPO) based on outstanding performance during the internship.",
+      "Received a Pre-Placement Offer (PPO) from Blue Star, one of India's leading HVAC and commercial refrigeration companies, based on strong performance and potential.",
     tag: 'Pre-Placement Offer',
     color: 'from-blue-500/10 to-cyan-500/10',
     border: 'border-blue-500/30',
